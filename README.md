@@ -7,7 +7,9 @@ They are windows batch files that execute powershell and MSBuild scripts.
 
 Run the build script with the pre-authenticated MyGet URL parameter. e.g.
 
-    build.cmd https://www.myget.org/F/elite/auth/{secrect}/api/v3/index.json
+```
+build.cmd https://www.myget.org/F/elite/auth/{secrect}/api/v3/index.json
+```
 
 This will tell the nuget client how to authenticate with our private feed, 
 restore packages from the office nuget.org feed and our private feed,
@@ -23,5 +25,6 @@ Run the publish script with the following parameters:
 3. IIS path: the deploy path in IIS. It's usually `"Default Web Site/ProjectName"`
 4. Build Configuration: for test environments, this is typically Debug, for live environments Release.
 
-    publish.cmd Sw.SampleWebProject localhost "Default Web Site/SampleWebProject"  Debug
-    
+```
+publish.cmd Sw.SampleWebProject localhost "Default Web Site/SampleWebProject"  Debug    
+```
